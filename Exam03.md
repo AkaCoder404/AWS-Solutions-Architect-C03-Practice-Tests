@@ -792,27 +792,68 @@ Answer: B
 
 ****
 
-Q47.
+Q47. A company needs to retain application log files for a critical application for 10 years. The application team regularly accesses logs from the past month for troubleshooting, but logs older than 1 month are rarely accessed. The application generates more than 10 TB of logs per month.
 
-Answer:
+Which storage option meets these requirements MOST cost-effectively?
+
+A. Store the logs in Amazon S3. Use AWS Backup to move logs more than 1 month old to S3 Glacier Deep Archive.
+
+B. Store the logs in Amazon S3. Use S3 Lifecycle policies to move logs more than 1 month old to S3 Glacier Deep Archive.
+
+C. Store the logs in Amazon CloudWatch Logs. Use AWS Backup to move logs more than 1 month old to S3 Glacier Deep Archive.
+
+D. Store the logs in Amazon CloudWatch Logs. Use Amazon S3 Lifecycle policies to move logs more than 1 month old to S3 Glacier Deep Archive.
+
+Answer: B
 
 ****
 
-Q48.
+Q48. A company has a data ingestion workflow that includes the following components: An Amazon Simple Notification Service (Amazon SNS) topic that receives notifications about new data deliveries. An AWS Lambda function that processes and stores the data The ingestion workflow occasionally fails because of network connectivity issues. When failure occurs, the corresponding data is not ingested unless the company manually reruns the job.
 
-Answer:
+What should a solutions architect do to ensure that all notifications are eventually processed?
 
+A. Configure the Lambda function for deployment across multiple Availability Zones.
+
+B. Modify the Lambda function's configuration to increase the CPU and memory allocations for the function.
+
+C. Configure the SNS topic's retry strategy to increase both the number of retries and the wait time between retries.
+
+D. Configure an Amazon Simple Queue Service (Amazon SQS) queue as the on-failure destination. Modify the Lambda function to process messages in the queue.
+
+Answer: D
 
 ****
 
-Q49.
+Q49. A company has a service that produces event data. The company wants to use AWS to process the event data as it is received. The data is written in a specific order that must be maintained throughout processing. The company wants to implement a solution that minimizes operational overhead.
+How should a solutions architect accomplish this?
 
-Answer:
+A. Create an Amazon Simple Queue Service (Amazon SQS) FIFO queue to hold messages. Set up an AWS Lambda function to process messages from the queue. 
+
+B. Create an Amazon Simple Notification Service (Amazon SNS) topic to deliver notifications containing payloads to process. Configure an AWS Lambda function as a subscriber. 
+
+C. Create an Amazon Simple Queue Service (Amazon SQS) standard queue to hold messages. Set up an AWS Lambda function to process messages from the queue independently. 
+
+D. Create an Amazon Simple Notification Service (Amazon SNS) topic to deliver notifications containing payloads to process. Configure an Amazon Simple Queue Service (Amazon SQS) queue as a subscriber.
+
+Answer: A
 
 **** 
 
-Q50.
-Answer:
+Q50. A company is migrating an application from on-premises servers to Amazon EC2 instances. As part of the migration design requirements, a solutions architect must implement infrastructure metric alarms. The company does not need to take action if CPU utilization increases to more than 50% for a short burst of time. However, if the CPU utilization increases to more than 50% and read IOPS on the disk are high at the same time, the company needs to act as soon as possible. The solutions architect also must reduce false alarms.
+
+What should the solutions architect do to meet these requirements?
+
+A. Create Amazon CloudWatch composite alarms where possible.
+
+B. Create Amazon CloudWatch dashboards to visualize the metrics and react to issues quickly.
+
+C. Create Amazon CloudWatch Synthetics canaries to monitor the application and raise an alarm.
+
+D. Create single Amazon CloudWatch metric alarms with multiple metric thresholds where possible.
+
+Answer: A
+
+
 
 
 

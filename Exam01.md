@@ -14,7 +14,10 @@ C. Schedule AWS Snowball Edge Storage Optimized device jobs daily to transfer da
 D. Upload the data from each site to an Amazon EC2 instance in the closest Region. Store the data in an Amazon Elastic Block Store (Amazon EBS) volume. At regular intervals, take an EBS snapshot and copy it to the Region that contains the destination
 S3 bucket. Restore the EBS volume in that Region.
 
+<details><summary> Show Answer </summary>
 Answer: A
+</details>
+
 ****
 
 Q02. A company needs the ability to analyze the log files of its proprietary application. The logs are stored in JSON format in an Amazon S3 bucket. Queries will be simple and will run on-demand. A solutions architect needs to perform the analysis with minimal changes to the existing architecture. What should solutions architect do to meet these requirements with the LEAST amount of operational overhead?
